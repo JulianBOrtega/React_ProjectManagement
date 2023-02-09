@@ -1,0 +1,136 @@
+.projectPreview
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projectPreview .hoverButtons
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    width: 100%;
+    opacity: 0%;
+}
+
+.projectPreview:hover .hoverButtons
+{
+    opacity: 100%;
+    transition: all 300ms ease
+}
+
+.projectPreview .hoverButtons .normalizingButton
+{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--c_dark_transparent);
+    backdrop-filter: blur(5px);
+    border-radius: 100%;
+}
+
+.projectPreview .hoverButtons img
+{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.projectPreview .project
+{
+    display: flex;
+    gap: 5px;
+
+    background-color: var(--c_dark_transparent);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--c_white);
+    height: 165px;
+}
+
+.projectPreview .project .projectImg
+{
+    height: 100%;
+    border-radius: 15px;
+}
+
+.projectPreview .project .infoContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    
+    padding: 2px 15px;
+    width: 100%;
+}
+
+.projectPreview .project .infoContainer .titleSection
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--c_emphasis);
+    padding-bottom: 10px;
+}
+
+.projectPreview .project .infoContainer .titleSection a
+{
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--c_white);
+    width: 100%;
+}
+
+.projectPreview .project .infoContainer .titleSection .members
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    cursor:pointer;
+}
+
+.projectPreview .project .infoContainer .titleSection .members img
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: var(--c_white);
+}  
+
+.projectPreview .project .infoContainer .detailsSection
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.projectPreview .project .infoContainer .detailsSection .smallText
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    color: white;
+}
+
+.projectPreview .project .infoContainer .detailsSection .description
+{
+    font-weight: 200;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+}

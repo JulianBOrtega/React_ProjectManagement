@@ -1,0 +1,39 @@
+.projectsPage
+{
+    position:absolute;
+    top: 75px;
+    display: flex;
+    gap: 15px;
+    width: 100vw;
+}
+
+.projectsPage h2
+{
+    font-size: 32px;
+    font-weight: 300;
+   /*  margin-bottom: 20px; */
+}
+
+.projectsPage .projects
+{
+    width: 75%;
+    padding: 10px;
+}
+
+.projectsPage .dueSoon
+{
+    width: 24%;
+    padding: 10px;
+    border-left: 1px solid var(--c_emphasis)
+}
+
+.projectsPage .list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 15px;
+    padding-right: 15px;
+    height: 70vh;
+    overflow-y: auto;
+}

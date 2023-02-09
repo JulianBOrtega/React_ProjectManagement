@@ -1,0 +1,64 @@
+.login
+{
+    background-color: #16192585;
+    backdrop-filter: blur(5px);
+    margin-left: 40vw;
+    padding: 20px 20px;
+}
+
+.login .form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px;
+}
+
+.login .form button
+{
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.login .form button:hover
+{
+    border-radius: 8px;
+    background-color:#51b89a85;
+    transition: 500ms all ease
+}
+
+.login .fieldDiv
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.login .fieldDiv label
+{
+    font-size: 14px;
+}
+
+.login .fieldDiv input
+{
+    height: 30px;
+    background-color: var(--c_darkest);
+    border: 1px solid transparent;
+    padding: 5px;
+    outline: none;
+    color: var(--c_white);
+}
+
+.login .fieldDiv input:hover
+{
+    border-color: var(--c_emphasis);
+    transition: 500ms all ease;
+}
+
+.login .bottomLinks
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+
+    background-color: #16192585;
+    backdrop-filter: blur(4px);
+    width: 100vw;
+    padding: 5px 15px 5px 15px;
+}
+
+.nav_logo
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    margin-right: 25px;
+}
+.nav_logo img
+{
+    width: 50px;
+    height: 50px;
+}
+.nav_logo p
+{
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-size: 38px;
+    color: var(--c_emphasis)
+}
+
+.nav_linksContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.nav_leftSide, .nav_rightSide
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_link
+{
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    color: var(--c_bright)
+}
+
+.nav_link:hover
+{
+    color: var(--c_emphasis)
+}

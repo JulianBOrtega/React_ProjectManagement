@@ -1,0 +1,23 @@
+.confirmAccount
+{
+    background-color: #16192585;
+    backdrop-filter: blur(5px);
+    margin-left: 30vw;
+    padding: 20px 20px;
+}
+
+.confirmAccount .infoContainer
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.confirmAccount .bottomLinks
+{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}

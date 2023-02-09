@@ -1,0 +1,56 @@
+.register
+{
+    background-color: #16192585;
+    backdrop-filter: blur(5px);
+    margin-left: 70vw;
+    padding: 20px 20px;
+}
+
+.register .form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px;
+}
+
+.register .form button
+{
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.register .form button:hover
+{
+    border-radius: 8px;
+    background-color:#51b89a85;
+    transition: 500ms all ease
+}
+
+.register .fieldDiv
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.register .fieldDiv label
+{
+    font-size: 14px;
+}
+
+.register .fieldDiv input
+{
+    height: 30px;
+    background-color: var(--c_darkest);
+    border: 1px solid transparent;
+    padding: 5px;
+    outline: none;
+    color: var(--c_white);
+}
+
+.register .fieldDiv input:hover
+{
+    border-color: var(--c_emphasis);
+    transition: 500ms all ease;
+}
