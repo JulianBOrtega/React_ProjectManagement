@@ -54,7 +54,7 @@ const RecoverPassword = () => {
     {
       const { data } = await clientAxios.post(`/auth/changePassword?token=${token}`, { password });
       handleAlertDisplay('¡Contraseña cambiada! Redireccionando...')
-      setTimeout(() => navigate('/'), 5000);
+      setTimeout(() => navigate('/'), 3000);
     } 
     catch (error) 
     {
@@ -80,7 +80,7 @@ const RecoverPassword = () => {
 
             <button type="submit">Reestablecer</button>
 
-            {alert.msg && (
+            { alert.msg && (
             <div className="infoContainer">
               <Alert {...alert} />
 

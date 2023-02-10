@@ -23,7 +23,7 @@ const ForgetPassword = () => {
         try 
         {
             const {data} = await clientAxios.post(`${import.meta.env.VITE_URL_BACKEND}/auth/sendToken`, { email });
-            handleAlertDisplay("¡Recibido! Revisa tu correo electrónico por un email para restablecer tu contraseña.")
+            handleAlertDisplay("¡Recibido! Revisa tu correo electrónico.")
             setEmail("")
         } 
         catch (error) 
@@ -55,6 +55,7 @@ const ForgetPassword = () => {
               </div>
 
               <button type="submit">Recuperar contraseña</button>
+              { alert.msg && <Alert {...alert} />}
           </form>
 
           <div className="bottomLinks">

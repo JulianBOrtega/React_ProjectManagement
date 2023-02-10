@@ -50,7 +50,7 @@ module.exports = {
             let user = await User.findOne({ email });
             if(!user) throw createError(403, "Credenciales inválidas");
             if(!user.checked) throw createError(403, "Tu cuenta no ha sido verificada")
-            if(!user.checkedPassword(password)) throw createError(403, 'Credenciales inválidas')
+            if(!await user.checkedPassword(password)) throw createError(403, 'Credenciales inválidas')
 
             const returnedData = {
                 name: user.name,
