@@ -34,40 +34,27 @@ const FormProject = ({ id, project }) => {
     }
 
   return (
-    <form onSubmit={handleSubmit}>
-        <div>
-            <label htmlFor="name">
-            Nombre Proyecto
-            </label>
+    <form onSubmit={handleSubmit} className='formProject'>
+        <div className='fieldDiv'>
+            <label htmlFor="name">Nombre Proyecto</label>
             <input id="name" type="text" placeholder="Nombre del proyecto" 
             name="name" value={name} onChange={handleInputChange}/>
         </div>
 
-        <div>
-            <label htmlFor="description">
-            Descripción
-            </label>
-            <textarea
-            id="description"
-            type="text"
-            style={{resize: "none"}}
-            placeholder="Descripción del proyecto"
-            name="description" value={description} onChange={handleInputChange}
-            ></textarea>
+        <div className='fieldDiv'>
+            <label htmlFor="description">Descripción</label>
+            <textarea id="description" type="text" style={{resize: "none"}} placeholder="Descripción del proyecto"
+            name="description" value={description} onChange={handleInputChange}></textarea>
         </div>
 
-        <div>
-            <label htmlFor="date-expire">
-            Fecha de entrega
-            </label>
+        <div className='fieldDiv'>
+            <label htmlFor="date-expire">Fecha de entrega</label>
             <input id="expireDate" type="date" 
             name="expireDate" value={expireDate?.split('T')[0]} onChange={handleInputChange}/>
         </div>
 
-        <div>
-            <label htmlFor="client">
-            Nombre Cliente
-            </label>
+        <div className='fieldDiv'>
+            <label htmlFor="client">Nombre Cliente</label>
             <input id="client" type="text" placeholder="Nombre del cliente" 
             name="client" value={client} onChange={handleInputChange}/>
         </div>

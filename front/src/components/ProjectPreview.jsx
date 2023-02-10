@@ -40,8 +40,8 @@ const ProjectPreview = ({ name, _id, description, expireDate, client }) => {
 
               <Link to={`/projects/${_id}`} className='detailsSection'>
                 <div className='smallText'>
-                  <small>Due <b>{expireDate?.split('T')[0]}</b></small>
-                  <small>A project for <b>{client}</b></small>
+                  <small>Vence el <b>{expireDate?.split('T')[0]}</b></small>
+                  <small>Proyecto para <b>{client}</b></small>
                 </div>
                 <p className='description'>{description}</p>
               </Link>

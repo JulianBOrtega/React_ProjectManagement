@@ -1,0 +1,66 @@
+.projectPage
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 1vw;
+    width: 98vw;
+    padding: 20px;
+}
+
+.projectPage .project
+{
+    width: 100%;
+}
+
+.projectPage .project #projectImg
+{
+    width: 50px;
+    height: 50px;
+}
+
+.projectPage .project .sectionTitle
+{
+    align-items: center;
+}
+
+.projectPage section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projectPage section .sectionTitle
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.projectPage section .img-button img
+{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.projectPage section .list
+{
+    display: flex;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.projectPage section h1
+{
+    font-weight: 500;
+    font-size: 38px;
+}
+
+.projectPage section h2
+{
+    font-weight: 300;
+}
+

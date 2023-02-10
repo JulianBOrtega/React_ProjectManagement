@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react'
 import { Link, useParams } from "react-router-dom";
-import Alert from '../components/Alert';
 import useProjects from '../hooks/useProjects';
+import Task from '../components/Task';
+import Collaborator from '../components/Collaborator';
 
 import './project.css'
 import placeholder from '../assets/placeholder.gif'
-import Task from '../components/Task';
-import Collaborator from '../components/Collaborator';
+import addIcon from '../assets/add.png';
+import editIcon from '../assets/edit.png';
+import deleteIcon from '../assets/delete.png';
 
 const Project = () => {
 
     const { id } = useParams();
-    const { loading, alert, getProject, project } = useProjects();
+    const { loading, getProject, project } = useProjects();
 
     useEffect(() => 
     {
         getProject(id);
     }, [id])
-
-    if(alert.msg) return <Alert {...alert} />
 
     const handleAddTask = () =>
     {
@@ -30,45 +30,52 @@ const Project = () => {
 
     }
 
+    const bgImg = 'https://media.istockphoto.com/id/1306441450/photo/underwater-light.jpg?s=612x612&w=0&k=20&c=g7DThntgh5Bx7uSvdDVI3Cxv-08fKmc9Mzc_ZzO5Q8k=';
+  document.body.style = "background: url('" + bgImg + "'); background-color: var(--c_dark); background-blend-mode: multiply; background-size: cover; background-attachment: fixed;";
+
     return (
         <>
             {
                 loading ? <p>Cargando...</p>
                 : (
-                    <div>
-                        <div>
-                            <h1>{ project.name }</h1>
-                            <Link
-                            to={`/projects/editProject/${id}`} 
-                            >
-                                <img src={placeholder} alt="edit-pic" />
-                                <p>Editar</p>
-                            </Link>
-                        </div>
-
-                        <div>
-                            <p>Tareas del proyecto</p>
-                            <div onClick={handleAddTask}>
-                                <img src={placeholder} alt="newTask-pic" />
-                                <p>Nueva Tarea</p>
+                    <div className='projectPage'>
+                        <section className='project'>
+                            <div className='sectionTitle'>
+                                <img src={placeholder} alt="project-img" id='projectImg' />
+                                <h1>{ project.name }</h1>
+                                <Link to={`/projects/editProject/${id}`} className='img-button' >
+                                    <img src={editIcon} alt="edit-pic" />
+                                </Link>
                             </div>
-                        </div>
+                            <hr />
+                        </section>
+
+                        <section>
+                            <div className='sectionTitle'>
+                                <h2> Tareas del proyecto</h2>
+                                <div onClick={handleAddTask} className='img-button'>
+                                    <img src={addIcon} alt="newTask-pic" />
+                                </div>
+                            </div>
+
+                            <div className='list'>
+                                { [1, 2].map((task) => <Task key={ task } { ...task }/>) }
+                            </div>
+                        </section>
                     
-                        <div>
-                            { [1, 2].map((task) => <Task key={ task } { ...task }/>) }
-                        </div>
 
-                        <div>
-                            <p>Colaboradores</p>
-                            <button onClick={handleAddCollab}>
-                                <img src={placeholder} alt="addCollab-pic" />
-                                <p>Agregar Colaborador</p>
-                            </button>
-                        </div>
+                        <section>
+                            <div className='sectionTitle'>
+                                <h2>Colaboradores</h2>
+                                <div onClick={handleAddCollab} className='img-button'>
+                                    <img src={addIcon} alt="addCollab-pic" />
+                                </div>
+                            </div>
 
-                        <div>
-                            { [1, 2].map((collab) => <Collaborator key={ collab } { ...collab }/>) }
-                        </div>
+                            <div className='list'>
+                                { [1, 2].map((collab) => <Collaborator key={ collab } { ...collab }/>) }
+                            </div>
+                        </section>
                 </div>
                 )   
             }

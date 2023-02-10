@@ -1,0 +1,28 @@
+.collabComponent
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--c_dark_transparent);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.collabComponent .collabPfp
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.collabComponent p
+{
+    font-size: 18px;
+}
+
+.collabComponent .removeIcon
+{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}

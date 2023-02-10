@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import FormProject from '../components/FormProject';
-
-import './projectEdit.css'
-import placeholder from '../assets/placeholder.gif'
 import { useParams } from 'react-router-dom';
 import useProjects from '../hooks/useProjects';
+
+import './projectEdit.css'
+import deleteIcon from '../assets/delete.png';
 
 const ProjectEdit = () => {
     const { id } = useParams();
@@ -22,18 +22,20 @@ const ProjectEdit = () => {
         if(confirmDelete) deleteProject(id);
     }
 
+    const bgImg = 'https://media.istockphoto.com/id/1212803678/photo/underwater-near-ocean-surface-with-rising-bubbles-in-blue-sea-abstract-background-texture.jpg?s=612x612&w=0&k=20&c=q02tXp219BVY4FPXc2Faeel-IsnYgZrSAX9AdEGKVP8=';
+    document.body.style = "background: url('" + bgImg + "'); background-color: var(--c_dark); background-blend-mode: multiply; background-size: cover; background-attachment: fixed;";
+
     return (
         <>
             {
                 loading ? <p>Cargando...</p>
                 : (
-                    <div>
-                        <div>
+                    <div className='projectEdit'>
+                        <div className='titleContainer'>
                             <h1>Editar proyecto: {project.name}</h1>
-                            <div>
-                            <img src={placeholder} alt="delete-pic" />
-                                <button onClick={handleDelete}>Eliminar</button>
-                            </div>
+                            <button onClick={handleDelete}>
+                                <img src={deleteIcon} alt="delete-icon" />
+                            </button>
                         </div>
                         <div>
                             <FormProject { ...{ id, project } }/>

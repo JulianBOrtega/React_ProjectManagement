@@ -1,0 +1,51 @@
+.formProject
+{
+    width: 400px;
+    background-color: #16192585;
+    backdrop-filter: blur(5px);
+    margin-left: 35vw;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formProject .fieldDiv
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.formProject .fieldDiv label
+{
+    font-size: 14px;
+}
+
+.formProject .fieldDiv input, .formProject .fieldDiv textarea
+{
+    height: 30px;
+    background-color: var(--c_darkest);
+    border: 1px solid transparent;
+    padding: 5px;
+    outline: none;
+    color: var(--c_white);
+}
+
+.formProject .fieldDiv textarea
+{
+    height: 100px;
+}
+
+.formProject button
+{
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.formProject button:hover
+{
+    border-radius: 8px;
+    background-color:#51b89a85;
+    transition: 500ms all ease
+}

@@ -1,0 +1,46 @@
+.taskComponent
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--c_dark_transparent);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.taskComponent .infoContainer
+{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.taskComponent .infoContainer .info
+{
+    align-self: flex-start;
+}
+
+.taskComponent .infoContainer img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.taskComponent .buttonContainer
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.taskComponent .buttonContainer img
+{
+    cursor: pointer;
+}
+
+.taskComponent .buttonContainer div, .taskComponent .buttonContainer img
+{
+    width: 20px;
+    height: 20px;
+}
